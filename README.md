@@ -7,7 +7,7 @@
 <img src="http://i.imgur.com/Kx6l8s3.png" alt="joola.io logo" title="joola.io" align="right" />
 
 [joola.io][22] is a real-time data analytics and visualization framework.
-**joola.io.datastore-mongodb** is a joola.io plugin to provide MongoDB based data store for its operation.
+**joola.io.datastore-influxdb** is a joola.io plugin to provide influxDB based data store for its operation.
 
 ### Setup Guide
 
