@@ -30,10 +30,11 @@
     "google datastore"
   ],
   "dependencies": {
-    "traverse": "~0.6.6",
-    "influx": "~1.0.0",
     "async": "~0.9.0",
-    "moment": "~2.6.0"
+    "influx": "~1.0.0",
+    "moment": "~2.6.0",
+    "traverse": "~0.6.6",
+    "underscore": "^1.6.0"
   },
   "engines": {
     "node": "0.10.*",
