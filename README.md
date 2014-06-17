@@ -1,6 +1,6 @@
-# joola.io influxDB Store [![Build Status][3]][4] [![Gitter chat](https://badges.gitter.im/joola/joola.io.png)](https://gitter.im/joola/joola.io)
+# joola.io influxDB Store [![Gitter chat](https://badges.gitter.im/joola/joola.io.png)](https://gitter.im/joola/joola.io)
 
-| **[Technical Docs] [techdocs]**     | **[Setup Guide] [setup]**     | **[joola.io Docs] [api-docs]**           | **[Contributing] [contributing]**           | **[About joola.io] [about]**     |
+| **[Technical Docs] [techdocs]**     | **[Setup Guide] [setup]**     | **[joola.io API] [api-docs]**           | **[Contributing] [contributing]**           | **[About joola.io] [about]**     |
 |-------------------------------------|-------------------------------|-----------------------------------|---------------------------------------------|-------------------------------------|
 | [![i1] [techdocs-image]] [techdocs] | [![i2] [setup-image]] [setup] | [![i3] [api-docs-image]] [api-docs] | [![i4] [contributing-image]] [contributing] | [![i5] [about-image]] [about] |
 
@@ -11,10 +11,40 @@
 
 ### Setup Guide
 
+In order to setup and use InfluxDB as joola.io's Datastore, following these steps:
 
-### Technical Docs
+```bash
+$ npm install joola.io.datastore-influxdb
+```
 
+Then open your joola.io configuration and add something along these lines:
+```javascript
+{
+  "store": {
+    "datastore": {
+      "mongodb": {
+        "enabled": false
+      },
+      "influxdb": {
+        "enabled": true,
+        "hosts": [
+          {
+            "host": "localhost",
+            "port": 8086
+          }
+        ],
+        "username": "[USERNAME]",
+        "password": "[PASSWORD]",
+        "database": "joola"
+      }
+    }
+  }
+}
+```
 
+Create a database named `joola` in InfluxDB.
+
+You're all set to go. to make sure it works, please run a node and monitor the log to see what provider is used.
 
 ### Contributing
 We would love to get your help! We have outlined a simple [Contribution Policy][18] to support a transparent and easy merging
