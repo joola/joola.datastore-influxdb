@@ -25,9 +25,8 @@
     "big-data",
     "visualization",
     "noSQL",
-    "google",
-    "datastore",
-    "google datastore"
+    "infxludb",
+    "datastore"
   ],
   "dependencies": {
     "async": "^0.9.0",
